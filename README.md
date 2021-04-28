@@ -5,7 +5,7 @@ This *non-commercial* hackathon/Superhack project provides a way to experience t
 
 ## What's in this project?
 
-← `index.html`: This is the main HTML page for this project.
+← `index.html`: This is the main HTML page for this project; created separate pages for each model for faster rendering
 
 ← `sky`: is an Equirectangular 360 degree image with no spatial coordinates
 
@@ -20,6 +20,7 @@ Credit to these artists and designers who created the realistic 3D models:
 - poesyboy - Anna Maersk
 - pino - container ship (fictional)
 - PM3D - Safmarine Illovo
+- mattia - cargo ship angelo
 
 high polygon count models render slower:
 - John A. - Container crane - 778K polygons 
