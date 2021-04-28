@@ -17,6 +17,10 @@ This *non-commercial* hackathon/Superhack project provides a way to experience t
 Credit to these artists and designers who created the realistic 3D models:
 
 - mattia marullo - container ship maersk line
-- John A. - Container crane
-- Bart D. - WW2 "Lane" Victory Ship
 - poesyboy - Anna Maersk
+- pino - container ship (fictional)
+- PM3D - Safmarine Illovo
+
+high polygon count models render slower:
+- John A. - Container crane - 778K polygons 
+- Bart D. - WW2 "Lane" Victory Ship - 1.68M polygons
