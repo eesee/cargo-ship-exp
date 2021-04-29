@@ -2,25 +2,72 @@
     <head>
         <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
         <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.1.0/dist/aframe-extras.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     </head>
     <body>
         <a-scene>
-            <a-entity id="rig" movement-controls="fly: true; speed: 0.3">
-                <a-entity camera position="0 1.6 0" look-controls></a-entity>
+
+          <a-assets>
+    <img id="logo" src="https://images.ctfassets.net/92fo1e671z6m/2ejzF1tDsjEvaQeTPkey2c/3f5c0690c86a43955d3d7e4d3528496b/Flexport_Mark_-_alternative_white.png">
+          </a-assets>
+            
+          <a-entity id="rig" movement-controls="fly: true; speed: 0.3">
+                <a-camera position="0 1.6 0" look-controls>
+                  <a-cursor></a-cursor>
+                </a-camera>
             </a-entity>
             
-            <!-- <a-collada-model src="https://cdn.glitch.com/c7211f20-bdcb-4f10-813d-85762bf6feed%2Fmodel.dae?v=1619547990185" position="5 -0.5 -14.5" rotation="0 45 0 "></a-collada-model> 
+            <html>
+    <head>
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.1.0/dist/aframe-extras.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+
+          <a-assets>
+    <img id="logo" src="https://images.ctfassets.net/92fo1e671z6m/2ejzF1tDsjEvaQeTPkey2c/3f5c0690c86a43955d3d7e4d3528496b/Flexport_Mark_-_alternative_white.png">
+          </a-assets>
+            
+          <a-entity id="rig" movement-controls="fly: true; speed: 0.3">
+                <a-camera position="0 1.6 0" look-controls>
+                  <a-cursor></a-cursor>
+                </a-camera>
+            </a-entity>
+            
+            <a-cylinder position="1 0.75 -3" rotation="0 180 0" radius="0.5" height="1.5" color="#fff" material="src: #logo"
+                event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
+                event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false">
+              <a-text id="cylinderText" value="Your Mission: FIND THE PILE OF PPE!! Hint: PPE is NOT in any BONUS scenes. Dot at center of screen is cursor; to navigate to other scenes place cursor on the Circles at right as color changes; click on desktop or move closely and hold cursor steady for 2 seconds in VR. VR works great in headsets and phones from Apple, Oculus, Samsung, Sony, Google including Cardboard" align="center" color="#FFF" visible="false" position="0 -1.05 -0.55"
+                geometry="primitive: plane; width: 4.75" material="color: #333" rotation="0 180 0"></a-text>
+            </a-cylinder>
+            <a-text value="Place Cursor on Logo for Instructions!" position="-2 1.55 -2.55"></a-text>
+          
+            <a-link href="b.html" title="Evergreen Ship" position="5 0.75 -3"></a-link>
+            <a-link href="c.html" title="Anna Maersk Ship" position="10 0.75 -3"></a-link>
+            <a-link href="d.html" title="BSC Angelo Ship" position="15 0.75 -3"></a-link>
+            <a-link href="e.html" title="BONUS Gantry Crane - high polygon count!" position="20 0.75 -3"></a-link>
+            <a-link href="f.html" title="BONUS Safmarine Illovo Ship - tricky to navigate" position="25 0.75 -3"></a-link>
+          
+            <!--
 
             <a-collada-model src="assets/maersk_ship/model.dae" position="-15 -10.5 8.5" rotation="0 90 0 "></a-collada-model> -->
  
             <a-collada-model src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/maersk_ship/model.dae" position="-15 -10.5 8.5" rotation="0 90 0 "></a-collada-model>
- <!--
-            <a-collada-model src="assets/anna_maersk_ship/model.dae" position="-05 -10.5 8.5" rotation="0 90 0 "></a-collada-model>
-            <a-collada-model src="assets/evergreen_ship/model.dae" position="15 -10.5 8.5" rotation="0 90 0 "></a-collada-model>
-            <a-collada-model src="assets/safmarine_illovo_ship/model.dae" position="35 -10.5 8.5" rotation="0 90 0 "></a-collada-model>
-            <a-collada-model src="assets/bsc_angelo_ship/model.dae" position="55 -10.5 8.5" rotation="0 90 0 "></a-collada-model>
 
-            <a-collada-model src="assets/crane/model.dae" position="55 -5 8.5" rotation="0 270 0" scale="0.5 0.5 0.5"></a-collada-model>-->
+            <a-sky src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/sandbar.jpg" color="#ECECEC"></a-sky>            
+            
+            <!-- <a-plane rotation="-90 0 0" width="3" height="3" color="#7BC8A4"></a-plane> -->
+        </a-scene>
+    </body>
+</html>
+          
+            <!--
+
+            <a-collada-model src="assets/maersk_ship/model.dae" position="-15 -10.5 8.5" rotation="0 90 0 "></a-collada-model> -->
+ 
+            <a-collada-model src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/maersk_ship/model.dae" position="-15 -10.5 8.5" rotation="0 90 0 "></a-collada-model>
 
             <a-sky src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/sandbar.jpg" color="#ECECEC"></a-sky>            
             

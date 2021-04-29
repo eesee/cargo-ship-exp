@@ -8,8 +8,22 @@
             <a-entity id="rig" movement-controls="fly: true; speed: 0.3">
                 <a-entity camera position="0 1.6 0" look-controls></a-entity>
             </a-entity>
+
+            <a-cylinder position="1 0.75 -3" rotation="0 180 0" radius="0.5" height="1.5" color="#fff" material="src: #logo"
+                event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
+                event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false">
+              <a-text id="cylinderText" value="Your Mission: FIND THE PILE OF PPE!! Hint: PPE is NOT in any BONUS scenes. Dot at center of screen is cursor; to navigate to other scenes place cursor on the Circles at right as color changes; click on desktop or move closely and hold cursor steady for 2 seconds in VR. VR works great in headsets and phones from Apple, Oculus, Samsung, Sony, Google including Cardboard" align="center" color="#FFF" visible="false" position="0 -1.05 -0.55"
+                geometry="primitive: plane; width: 4.75" material="color: #333" rotation="0 180 0"></a-text>
+            </a-cylinder>
+            <a-text value="Place Cursor on Logo for Instructions!" position="-2 1.55 -2.55"></a-text>
+          
+            <a-link href="index.html" title="Maersk Ship" position="5 0.75 -3"></a-link>
+            <a-link href="b.html" title="Evergreen Ship" position="10 0.75 -3"></a-link>
+            <a-link href="c.html" title="Anna Maersk Ship" position="15 0.75 -3"></a-link>
+            <a-link href="e.html" title="BONUS Gantry Crane - high polygon count!" position="20 0.75 -3"></a-link>
+            <a-link href="f.html" title="BONUS Safmarine Illovo Ship - tricky to navigate" position="25 0.75 -3"></a-link>
             
-            <a-collada-model src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/safmarine_illovo_ship/model.dae" position="-15 -10.5 8.5" rotation="0 90 0 "></a-collada-model>
+            <a-collada-model src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/bsc_angelo_ship/model.dae" position="-15 -10.5 8.5" rotation="0 90 0 "></a-collada-model>
 
             <a-sky src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/sandbar.jpg" color="#ECECEC"></a-sky>            
         </a-scene>
