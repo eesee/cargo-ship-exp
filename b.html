@@ -13,10 +13,12 @@
             </a-entity>
 
             <a-assets>
-                <img id="logo" src="https://images.ctfassets.net/92fo1e671z6m/2ejzF1tDsjEvaQeTPkey2c/3f5c0690c86a43955d3d7e4d3528496b/Flexport_Mark_-_alternative_white.png">
+                <img id="logo" src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/Flexport_Mark_-_alternative_white.png">
+                <img id="ppe" src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/facemasks.jpg">
+                <audio id="coin" src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/smb_coin.wav"></audio>
             </a-assets>
 
-            <a-text value="Hey 'Porter, place your cursor (gold dot) on Logo for Instructions!" width="4" position="-2 1.65 -2.55"></a-text>
+            <a-text value="Ahoy 'Porter, place your cursor (gold dot) on Logo for Instructions!" width="4" position="-2 1.65 -2.55"></a-text>
             <a-cylinder position="0 0.75 -3" rotation="0 180 0" radius="0.5" height="1.5" color="#fff" material="src: #logo"
                 event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
                 event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false">
@@ -33,6 +35,11 @@
                     geometry="primitive: plane; width: 4.75; height: 4.5" material="color: #333; transparent: true; opacity: 0.8" rotation="0 180 0">
                 </a-text>
             </a-cylinder>
+
+            <a-box id="findme" position="0 -5.5 -3" rotation="0 45 0" color="#4CC3D9" material="src: #ppe">
+                <a-text value="find my twin please!" position="0 1 0" color="#FFF" scale="1.5 1.5 1.5" align="center"></a-text>
+                <a-animation attribute="position" to="0 -2 -3" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+            </a-box>
           
             <a-link href="index.html" title="Maersk Ship - good on most devices" position="5 0.75 -3"></a-link>
             <a-link href="c.html" title="Evergreen Ship - desktop recommended" position="10 0.75 -3"></a-link>
@@ -42,7 +49,14 @@
             
             <a-collada-model src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/bsc_angelo_ship/model.dae" position="-25 -10.5 8.5" rotation="0 90 0 "></a-collada-model>
 
-            <a-sky src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/sandbar.jpg" color="#ECECEC"></a-sky>            
+            <a-sky src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/sandbar.jpg" color="#ECECEC"></a-sky>
+            
+            <a-box position="-33 8.5 47" rotation="0 45 0" color="#4CC3D9" material="src: #ppe" scale="0.7 0.7 0.7" width="0.55" height="0.55" depth="0.55">
+                <a-animation attribute="position" from="-33 8.5 47" to="0 -1 -3" direction="alternate" dur="2000" repeat="2" begin="click"></a-animation>
+                <a-animation attribute="scale" begin="mouseenter" dur="300" to="2 2 2"></a-animation>
+                <a-animation attribute="scale" begin="mouseleave" dur="300" to="0.7 0.7 0.7"></a-animation>
+                <a-animation attribute="rotation" begin="click" dur="9000" to="360 405 45" repeat="2"></a-animation>
+            </a-box>
         </a-scene>
     </body>
 </html>
