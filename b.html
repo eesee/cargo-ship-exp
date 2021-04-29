@@ -23,7 +23,7 @@
                 event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
                 event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false">
 
-                <a-text id="cylinderText" value="Welcome to JUST SHIP IT: Cargo & Container, The Experience!
+                <a-text id="cylinderText" value="Welcome to JUST FLEX IT: Cargo & Container, The Experience!
                     Your Mission, should you choose to accept it: FIND THE LOST CACHE OF FRESH ESSENTIAL PPE FOR FRONT LINE WORKERS aboard 2 of the 4 non-bonus container ships!! 
                     Hint: PPE is NOT in any BONUS ships/scenes.
                     If you manage to locate the missing PPE, try to remember where it was on each ship and click on the stockpile to complete your quest!
@@ -49,16 +49,17 @@
             <a-link href="e.html" title="BONUS Gantry Crane - high polygon count!" position="20 0.75 -3"></a-link>
             <a-link href="f.html" title="BONUS Safmarine Illovo Ship - tricky to navigate" position="25 0.75 -3"></a-link>
             
-            <a-collada-model src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/bsc_angelo_ship/model.dae" position="-25 -10.5 8.5" rotation="0 90 0 "></a-collada-model>
+            <a-collada-model src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/bsc_angelo_ship/model.dae" position="-25 -10.5 58" rotation="0 90 0 "></a-collada-model>
 
             <a-sky src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/sandbar.jpg" color="#ECECEC"></a-sky>
             
-            <a-box position="-33 8.5 47" rotation="0 45 0" color="#4CC3D9" material="src: #ppe" scale="0.7 0.7 0.7" width="0.55" height="0.55" depth="0.55">
-                <a-animation attribute="position" from="-33 8.5 47" to="0 -1 -3" direction="alternate" dur="2000" repeat="2" begin="click"></a-animation>
+            <a-box position="-33.1 8.1 47" rotation="0 45 0" color="#4CC3D9" material="src: #ppe" scale="0.7 0.7 0.7" width="0.55" height="0.55" depth="0.55">
+                <a-animation attribute="position" from="-33.1 8.1 47" to="0 -1 -3" direction="alternate" dur="2000" repeat="2" begin="click"></a-animation>
                 <a-animation attribute="scale" begin="mouseenter" dur="300" to="2 2 2"></a-animation>
                 <a-animation attribute="scale" begin="mouseleave" dur="300" to="0.7 0.7 0.7"></a-animation>
                 <a-animation attribute="rotation" begin="click" dur="9000" to="360 405 45" repeat="2"></a-animation>
             </a-box>
+            
         </a-scene>
     </body>
 </html>
