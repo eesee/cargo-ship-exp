@@ -25,7 +25,7 @@
 
 
                 <a-text id="cylinderText" value="Welcome to JUST FLEX IT: Cargo & Container, The Experience!
-                    Your Mission, should you choose to accept it: FIND THE LOST CACHE OF FRESH ESSENTIAL PPE FOR FRONT LINE WORKERS aboard 2 of the 4 non-bonus container ships!! 
+                    Your Mission, should you choose to accept it: FIND THE LOST CACHE OF FRESH ESSENTIAL PPE FOR FRONT LINE WORKERS aboard each of the 4 non-bonus container ships!! 
                     Hint: PPE is NOT in any BONUS ships/scenes.
                     If you manage to locate the missing PPE, try to remember where it was on each ship and click on the stockpile to complete your quest!
                     Use WASD or arrow keys to move, mouse or touchpad to look around on desktop. 
@@ -40,8 +40,11 @@
             </a-cylinder>
 
             <a-box id="findme" position="0 -5.5 -3" rotation="0 45 0" color="#4CC3D9" material="src: #ppe">
-                <a-text value="find my twin please!" position="0 1 0" color="#FFF" scale="1.5 1.5 1.5" align="center"></a-text>
+                <a-text value="find my twin please! click me!" position="0 1 0" color="#FFF" scale="1.5 1.5 1.5" align="center"></a-text>
                 <a-animation attribute="position" to="0 -2 -3" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+                <a-animation attribute="scale" begin="mouseenter" dur="300" to="2 2 2"></a-animation>
+                <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
+                <a-animation attribute="rotation" begin="click" dur="9000" to="360 405 45" repeat="2"></a-animation>
             </a-box>
           
             <a-link href="index.html" title="Maersk Ship - good on most devices" position="5 0.75 -3"></a-link>
@@ -53,6 +56,13 @@
             <a-collada-model src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/evergreen_ship/model.dae" position="-45 -10.5 8.5" rotation="0 90 0 "></a-collada-model>
 
             <a-sky src="https://raw.githubusercontent.com/eesee/cargo-ship-exp/main/assets/sandbar.jpg" color="#ECECEC"></a-sky>
+
+            <a-box position="-136.5 5 0.5" rotation="0 45 0" color="#4CC3D9" material="src: #ppe" scale="0.7 0.7 0.7" width="0.55" height="0.55" depth="0.55">
+                <a-animation attribute="position" from="-136.5 5 0.5" to="0 -1 -3" direction="alternate" dur="2000" repeat="2" begin="click"></a-animation>
+                <a-animation attribute="scale" begin="mouseenter" dur="300" to="2 2 2"></a-animation>
+                <a-animation attribute="scale" begin="mouseleave" dur="300" to="0.7 0.7 0.7"></a-animation>
+                <a-animation attribute="rotation" begin="click" dur="9000" to="360 405 45" repeat="2"></a-animation>
+            </a-box>
         </a-scene>
     </body>
 </html>
