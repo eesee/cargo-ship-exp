@@ -3,6 +3,16 @@
         <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
         <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.1.0/dist/aframe-extras.min.js"></script>
         <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WC1ZHFHRET"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-WC1ZHFHRET');
+        </script>
     </head>
     <body>
         <a-scene>
@@ -26,7 +36,7 @@
                 sound="src: #coin; volume: 1; on: click">
 
                 <a-text id="cylinderText" value="Welcome to JUST FLEX IT: Cargo & Container, The Experience!
-                    Your Mission, should you choose to accept it: FIND THE LOST CACHE OF FRESH ESSENTIAL PPE FOR FRONT LINE WORKERS aboard 2 of the 4 non-bonus container ships!! 
+                    Your Mission, should you choose to accept it: FIND THE LOST CACHE OF FRESH ESSENTIAL PPE FOR FRONT LINE WORKERS aboard each of the 4 non-bonus container ships!! 
                     Hint: PPE is NOT in any BONUS ships/scenes.
                     If you manage to locate the missing PPE, try to remember where it was on each ship and click on the stockpile to complete your quest!
                     Use WASD or arrow keys to move, mouse or touchpad to look around on desktop. 
@@ -41,8 +51,11 @@
             </a-cylinder>
           
             <a-box id="findme" position="0 -5.5 -3" rotation="0 45 0" color="#4CC3D9" material="src: #ppe">
-                <a-text value="find my twin please!" position="0 1 0" color="#FFF" scale="1.5 1.5 1.5" align="center"></a-text>
+                <a-text value="find my twin please! click me!" position="0 1 0" color="#FFF" scale="1.5 1.5 1.5" align="center"></a-text>
                 <a-animation attribute="position" to="0 -2 -3" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+                <a-animation attribute="scale" begin="mouseenter" dur="300" to="2 2 2"></a-animation>
+                <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
+                <a-animation attribute="rotation" begin="click" dur="9000" to="360 405 45" repeat="2"></a-animation>
             </a-box>
           
             <a-link href="b.html" title="BSC Angelo Ship - good on most devices" position="5 0.75 -3"></a-link>
